@@ -51,14 +51,18 @@
                                 <x-jet-label for="max_people" value="定員数" />
                                 {{ $event->max_people }}
                             </div>
+                            <div class="flex space-x-4 justify-around">
                             @if($event->is_visible)
                                 表示
                             @else
                                 非表示
                             @endif
+                            </div>
+                            @if ($event->eventDate >= \Carbon\Carbon::today()->format('Y年m月d日'))
                             <x-jet-button class="ml-4">
                                 編集
                             </x-jet-button>
+                            @endif
                         </div>
                     </form>
                 </div>
