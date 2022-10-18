@@ -18,7 +18,7 @@ use Barryvdh\Debugbar\DataCollector\EventCollector;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('calendar');
 });
 
 Route::middleware([
